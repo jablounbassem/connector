@@ -1,5 +1,5 @@
 {
-    "name": "sofia-holding/OdooConnectorBundle",
+    "name": "sofia-holding/odoo-client-bundle",
     "description": "Odoo client Bundle",
     "type": "symfony-bundle",
     "license": "MIT",
