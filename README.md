@@ -8,7 +8,7 @@ A Symfony Client for Odoo using Ripcord RPC library (as used in Odoo Web API doc
 * Download OdooConnectorBundle using [composer]()
 
 ```composer
-composer require sofia-holding/odoo-connector-bundle
+composer require sofia-holding/odoo-client-bundle
 ```
 * Enable the Bundle
 ```php
@@ -35,14 +35,6 @@ public function registerBundles()
     username_odoo: 'user@email.com'
     password_odoo: 'yourpassword'
 ```
-* Import OdooConnectorBundle routing.
-
-```yml
-# app/config/routing.yml
-odoo_connector:
-    resource: "@OdooConnectorBundle/Resources/config/routes.yaml"
-```
-* Move the directory ‘assets’ to ‘/web’.
 
 
 ## Usage
@@ -62,10 +54,10 @@ $odooService->create('res.partner', $partner);
 
 # update records        
 $option[0] = array('name'=>"New  Partner Name");
-$odooService->update('res.partner',$id=7,$option);
+$odooService->update('res.partner',$id,$option);
 
 # delete records        
-$odooService->delete('res.partner',$id=7);
+$odooService->delete('res.partner',$id);
 ```
 
 ## Contributing
